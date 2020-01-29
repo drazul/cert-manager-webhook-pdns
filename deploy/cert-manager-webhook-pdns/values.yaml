@@ -11,6 +11,8 @@ groupName: acme.zacharyseguin.ca
 certManager:
   namespace: cert-manager
   serviceAccountName: cert-manager
+  # apiVersion: certmanager.k8s.io/v1alpha1
+  apiVersion: cert-manager.io/v1alpha2
 
 image:
   repository: zachomedia/cert-manager-webhook-pdns
