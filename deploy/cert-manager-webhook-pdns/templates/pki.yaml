@@ -1,3 +1,4 @@
+{{ if .Values.configureDefaultIssuer }}
 ---
 # Create a selfsigned Issuer, in order to create a root CA certificate for
 # signing webhook serving certificates
@@ -74,3 +75,4 @@ spec:
   - {{ include "cert-manager-webhook-pdns.fullname" . }}
   - {{ include "cert-manager-webhook-pdns.fullname" . }}.{{ .Release.Namespace }}
   - {{ include "cert-manager-webhook-pdns.fullname" . }}.{{ .Release.Namespace }}.svc
+{{ end }}

@@ -14,6 +14,8 @@ certManager:
   # apiVersion: certmanager.k8s.io/v1alpha1
   apiVersion: cert-manager.io/v1alpha2
 
+configureDefaultIssuer: false
+
 image:
   repository: zachomedia/cert-manager-webhook-pdns
   tag: latest
